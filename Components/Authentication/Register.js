@@ -54,6 +54,8 @@ class Register extends Component {
     this.props.register(userData, workerDetail, redirectToProfile);
   };
 
+  // you can have a reusable handleChange function to handle all onChangeText below.
+
   render() {
     const {
       username,
@@ -125,6 +127,9 @@ class Register extends Component {
                 <Text
                   full
                   style={{ fontWeight: "bold", color: "white" }}
+                  {/* no need for arrow function */}
+                  {/* remove the onPress and add an onSubmit to the <form ...> tag */}
+                  {/* then give this button type="submit" */}
                   onPress={() => this.registerSubmit()}
                 >
                   Register

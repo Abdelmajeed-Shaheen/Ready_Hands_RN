@@ -9,10 +9,11 @@ import { getJobs } from "../../../redux/actions";
 
 import styles from "../styles";
 
+// rename file to index.js
 class JobList extends Component {
   state = {
     query: "",
-    text: "",
+    text: "", // text isn't being used anywhere, remove it.
   };
 
   setQuery = (query, text) => this.setState({ query, text });
@@ -40,6 +41,7 @@ class JobList extends Component {
               onChangeText={this.setQuery}
               value={this.state.query}
             />
+            {/* use setQuery and pass it "" */}
             <Icon name="close" onPress={() => this.setState({ query: "" })} />
           </Item>
         </Header>
