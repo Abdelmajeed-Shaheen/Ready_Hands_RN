@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+//Native Base imports
 import {
   Container,
   Content,
@@ -11,26 +13,40 @@ import {
   Body,
 } from "native-base";
 
+//Authentication redux action
+import { login } from "../../redux/actions/authentication";
+
+//StyleSheet
 import styles from "./styles";
+
+//Screen Names
+import { JOBS, JOBSMAP } from "../../Navigation/screenNames";
+
+//Connect
+import { connect } from "react-redux";
 
 class Login extends Component {
   state = {
-    email: "",
+    username: "",
     password: "",
   };
 
   render() {
-    const { email, password } = this.state;
+    const { username, password } = this.state;
+    const { login, navigation } = this.props;
+    const redirectToProfile = () => {
+      navigation.navigate(JOBS, { screen: JOBSMAP });
+    };
 
     return (
       <Container>
         <Content>
           <Form>
             <Item floatingLabel>
-              <Label>Email</Label>
+              <Label>Username</Label>
               <Input
-                value={email}
-                onChangeText={(email) => this.setState({ email })}
+                value={username}
+                onChangeText={(username) => this.setState({ username })}
               />
             </Item>
             <Item floatingLabel last>
@@ -43,8 +59,8 @@ class Login extends Component {
             </Item>
           </Form>
           <Body>
-            <Button style={styles.authButton}>
-              <Text full style={{ fontWeight: "bold" }}>
+            <Button style={styles.authButton} onPress={() => login(this.state)}>
+              <Text full style={{ fontWeight: "bold", color: "white" }}>
                 Login
               </Text>
             </Button>
@@ -55,4 +71,6 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapDispatchToProps = { login };
+
+export default connect(null, mapDispatchToProps)(Login);

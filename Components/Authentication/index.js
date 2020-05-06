@@ -1,47 +1,106 @@
-import React from "react";
+import React, { Component } from "react";
 
+//Authentication
 import Register from "./Register";
 import Login from "./Login";
 import { LOGIN, REGISTER } from "../../Navigation/screenNames";
-import { Container, Tab, Tabs, TabHeading, Text, Icon } from "native-base";
+
+//Native Base
+import {
+  Container,
+  TabHeading,
+  Title,
+  Tab,
+  Icon,
+  Tabs,
+  Text,
+} from "native-base";
+
+//StyleSheet
 import styles from "./styles";
 
-const Authentication = () => (
-  <Container>
-    <Tabs>
-      <Tab
-        heading={
-          <TabHeading style={{ backgroundColor: "black" }}>
-            <Icon name="ios-paper" type="Ionicons" />
-            <Text>{REGISTER}</Text>
-          </TabHeading>
-        }
-        tabStyle={{ backgroundColor: "red" }}
-        textStyle={{ color: "#fff" }}
-        activeTabStyle={{ backgroundColor: "red" }}
-        activeTextStyle={{ color: "#fff", fontWeight: "normal" }}
-      >
-        <Register />
-      </Tab>
-      <Tab
-        heading={
-          <TabHeading
-            style={{
-              backgroundColor: "black",
-              activeTextStyle: "black",
-              activeTabStyle: "red",
-            }}
-          >
-            <Icon name="login" type="Entypo" />
-            <Text>{LOGIN}</Text>
-          </TabHeading>
-        }
-        tabStyle={{ backgroundColor: "rgb(300,91,28)" }}
-      >
-        <Login />
-      </Tab>
-    </Tabs>
-  </Container>
-);
+//Connect
+import { connect } from "react-redux";
 
-export default Authentication;
+class Authentication extends Component {
+  state = {
+    activePage: 2,
+  };
+
+  render() {
+    const { navigation } = this.props;
+    return (
+      <Container>
+        <Title style={styles.title}>Authentication</Title>
+        <Tabs tabBarUnderlineStyle={{ borderBottomWidth: 4 }}>
+          <Tab
+            active={this.state.activePage === 1}
+            heading={
+              <TabHeading
+                style={{
+                  backgroundColor: "#669999",
+                  activeTextStyle: "black",
+                  activeTabStyle: "red",
+                  underlineStyle: "white",
+                }}
+              >
+                <Icon
+                  name="ios-paper"
+                  type="Ionicons"
+                  style={{
+                    color: this.state.activePage == 1 ? "white" : "black",
+                  }}
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {REGISTER}
+                </Text>
+              </TabHeading>
+            }
+          >
+            <Register navigation={navigation} />
+          </Tab>
+          <Tab
+            heading={
+              <TabHeading
+                style={{
+                  backgroundColor: "#669999",
+                  activeTextStyle: "black",
+                  activeTabStyle: "red",
+                }}
+              >
+                <Icon
+                  style={{
+                    color: "black",
+                  }}
+                  name="login"
+                  type="Entypo"
+                />
+                <Text
+                  style={{
+                    color: "white",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {LOGIN}
+                </Text>
+              </TabHeading>
+            }
+          >
+            <Login navigation={navigation} />
+          </Tab>
+        </Tabs>
+      </Container>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  user: state.userState.user,
+});
+
+export default connect(mapStateToProps)(Authentication);

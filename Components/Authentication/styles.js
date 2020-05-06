@@ -26,12 +26,20 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   authButton: {
-    backgroundColor: "black",
+    backgroundColor: "#669999",
     marginTop: 5,
   },
   tabBar: {
-    backgroundColor: "rgb(300,91,28)",
+    backgroundColor: "#669999",
   },
+  title: {
+    backgroundColor: "#669999",
+    color: "black",
+    paddingTop: 10,
+    fontSize: 20,
+    marginTop: 1,
+  },
+  detail: {},
 });
 
 export default styles;
