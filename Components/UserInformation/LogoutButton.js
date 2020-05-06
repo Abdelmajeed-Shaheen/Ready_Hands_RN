@@ -13,7 +13,7 @@ const LogoutButton = ({ logout }) => (
   <Content>
     <Body>
       <Button
-        style={{ marginBottom: 5, backgroundColor: "#CC1111" }}
+        style={{ marginBottom: 5, backgroundColor: "rgb(200,0,0)" }}
         onPress={logout}
       >
         <Icon

@@ -1,26 +1,33 @@
 import React, { Component } from "react";
 //NativeBase
-import { List, Content, Spinner, Header, Item, Icon, Input } from "native-base";
+import {
+  List,
+  Content,
+  Spinner,
+  Header,
+  Item,
+  Icon,
+  Input,
+  Text,
+} from "native-base";
 //Job Card
 import JobCard from "./JobCard";
 //Connect
 import { connect } from "react-redux";
-import { getJobs } from "../../../redux/actions";
 
 import styles from "../styles";
 
 class JobList extends Component {
   state = {
     query: "",
-    text: "",
   };
 
-  setQuery = (query, text) => this.setState({ query, text });
+  setQuery = (query) => this.setState({ query });
 
   filterJobs = () => {
     const query = this.state.query.toLowerCase();
     return this.props.jobs.filter((job) => {
-      return `${job.title}`.toLowerCase().includes(query);
+      return `${job.length}${job.title}`.toLowerCase().includes(query);
     });
   };
   render() {
@@ -40,9 +47,12 @@ class JobList extends Component {
               onChangeText={this.setQuery}
               value={this.state.query}
             />
-            <Icon name="close" onPress={() => this.setState({ query: "" })} />
+            <Icon name="close" onPress={() => this.setQuery("")} />
           </Item>
         </Header>
+        <Text style={{ fontWeight: "bold" }}>
+          {/* {this.props.jobs.length} Jobs Found */}
+        </Text>
         <List>{jobsList}</List>
       </Content>
     );

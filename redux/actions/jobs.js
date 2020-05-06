@@ -15,18 +15,16 @@ export const getJobs = () => async (dispatch) => {
   } catch (error) {}
 };
 
-export const getWorkerAppliedJobs = () => {
-  return async (dispatch) => {
-    try {
-      const res = await instance.get("worker/applied/jobs/");
-      dispatch({
-        type: GET_WORKER_APPLIED_JOBS,
-        payload: res.data,
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
+export const getWorkerAppliedJobs = () => async (dispatch) => {
+  try {
+    const res = await instance.get("worker/applied/jobs/");
+    dispatch({
+      type: GET_WORKER_APPLIED_JOBS,
+      payload: res.data,
+    });
+  } catch (err) {
+    console.log(err);
+  }
 };
 export const applyToJob = (job_id) => {
   return async (dispatch) => {

@@ -20,25 +20,23 @@ const styles = StyleSheet.create({
   prevcard: {
     elevation: 10,
     borderStyle: "solid",
-    borderBottomWidth: 10,
-    borderRadius: 20,
+
     borderBottomColor: "rgb(192,192,192)   ",
     borderLeftColor: "rgb(192,192,192)   ",
   },
   prevcardHeader: {
-    backgroundColor: "#CC1111",
+    backgroundColor: "#669999",
   },
 
   upcomingcard: {
     elevation: 10,
     borderStyle: "solid",
-    borderBottomWidth: 10,
-    borderRadius: 20,
+
     borderBottomColor: "rgb(192,192,192)   ",
     borderLeftColor: "rgb(192,192,192)   ",
   },
   upcomingcardHeader: {
-    backgroundColor: "green",
+    backgroundColor: "#669999",
   },
 
   indicatorStyle: {

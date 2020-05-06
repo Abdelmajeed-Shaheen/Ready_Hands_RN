@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 //Job Map
-import JobMap from "./JobMap/JobMap";
+import JobMap from "./JobMap";
 //Job List
-import JobList from "./JobList/JobList";
+import JobList from "./JobList";
 //Screen Names
 import { JOBLIST, JOBMAP } from "../../Navigation/screenNames";
 

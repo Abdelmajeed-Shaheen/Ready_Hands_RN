@@ -48,10 +48,8 @@ class Register extends Component {
       phone_no: this.state.phone_no,
       hour_rate: this.state.hour_rate,
     };
-    const redirectToProfile = () => {
-      this.props.navigation.navigate(JOBS, { screen: JOBMAP });
-    };
-    this.props.register(userData, workerDetail, redirectToProfile);
+
+    this.props.register(userData, workerDetail);
   };
 
   render() {
@@ -121,7 +119,7 @@ class Register extends Component {
             </Item>
 
             <Body>
-              <Button style={styles.authButton}>
+              <Button type="submit" style={styles.authButton}>
                 <Text
                   full
                   style={{ fontWeight: "bold", color: "white" }}

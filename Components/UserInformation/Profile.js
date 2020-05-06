@@ -38,7 +38,11 @@ const Profile = ({ user, navigation, loading }) => {
           {user.user.first_name} {user.user.last_name}
         </Text>
       </CardItem>
+      <CardItem>
+        <Icon name="email" type="MaterialIcons" style={styles.iconColor} />
 
+        <Text style={styles.profileText}> essamabuissa@hotmail.com</Text>
+      </CardItem>
       <CardItem>
         <Icon name="phone" type="FontAwesome" style={styles.iconColor} />
 
@@ -48,7 +52,7 @@ const Profile = ({ user, navigation, loading }) => {
         <StarRating
           disabled={false}
           maxStars={5}
-          rating={user.rating}
+          rating={parseInt(user.rating)}
           selectedStar={(rating) => this.onStarRatingPress(rating)}
         />
       </CardItem>

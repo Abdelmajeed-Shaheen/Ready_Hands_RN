@@ -43,16 +43,13 @@ export const login = (userData) => async (dispatch) => {
     console.error(error);
   }
 };
-export const register = (userData, workerDetail, redirect) => async (
-  dispatch
-) => {
+export const register = (userData, workerDetail) => async (dispatch) => {
   try {
     const response = await instance.post(`register`, userData);
     const token = response.data.tokens.access;
     instance.defaults.headers.common.Authorization = `Bearer ${token}`;
     await instance.post(`worker/create/`, workerDetail);
     dispatch(setCurrentUser(token));
-    redirect();
   } catch (error) {
     console.error(error);
   }

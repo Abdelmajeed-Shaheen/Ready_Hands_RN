@@ -40,15 +40,12 @@ import UpcomingJobs from "./UpcomingJobs";
 class UserInformation extends Component {
   state = {
     activePage: 1,
-    loading: true,
   };
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     if (this.props.user) this.setState({ loading: false });
   };
   render() {
-    if (this.state.loading) return <Spinner color="rgb(70,144,69)" />;
-
     this.props.getWorkerAppliedJobs();
 
     return (
@@ -76,7 +73,7 @@ class UserInformation extends Component {
               </TabHeading>
             }
           >
-            {this.props.user ? <Profile /> : null}
+            <Profile />
           </Tab>
 
           <Tab

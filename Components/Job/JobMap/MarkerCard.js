@@ -9,13 +9,19 @@ import { JOBDETAIL } from "../../../Navigation/screenNames";
 //StyleSheet
 import styles from "../styles";
 
+import moment from "moment";
 const MarkerCard = ({ job, navigation }) => (
   <TouchableOpacity onPress={() => navigation.navigate(JOBDETAIL, { job })}>
     <Card style={styles.card}>
-      <Text style={styles.cardHeader}>{job.title}</Text>
+      <Text style={styles.cardheader}>Job Title: {job.title}</Text>
 
       <Text style={styles.cardText}>Price/Worker: {job.price} JD</Text>
-      <Text style={styles.cardText}>Workers: {job.no_of_workers} </Text>
+      <Text style={styles.cardText}>
+        Date: {moment(job.date_from).format("LLLL")}{" "}
+      </Text>
+      <Text style={{ fontWeight: "bold", color: "rgb(200,0,0)" }}>
+        More Details...
+      </Text>
     </Card>
   </TouchableOpacity>
 );

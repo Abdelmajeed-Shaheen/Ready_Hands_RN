@@ -16,4 +16,4 @@ export const JOBDETAIL = "Job Detail";
 export const USERINFO = "Worker Information";
 export const PROFILE = "Profile";
 export const PREVJOBS = "Pending Jobs";
-export const UPCOMINGJOBS = "Accetpetd Jobs";
+export const UPCOMINGJOBS = "Accepted Jobs";

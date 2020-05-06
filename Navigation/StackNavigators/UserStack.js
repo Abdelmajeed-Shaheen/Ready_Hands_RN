@@ -1,11 +1,21 @@
 import React from "react";
 
+//Stack Navigator
 import { createStackNavigator } from "@react-navigation/stack";
+
+//Screen Names
 import { AUTHENTICATION, USERINFO } from "../screenNames";
-import Authentication from "../../Components/Authentication/index";
-import UserInformation from "../../Components/UserInformation/index";
+
+//Authentication
+import Authentication from "../../Components/Authentication";
+
+//User Information
+import UserInformation from "../../Components/UserInformation";
+
+//Connect
 import { connect } from "react-redux";
 
+//Screen Options
 import screenOptions from "../screenOptions";
 
 const { Navigator, Screen } = createStackNavigator();

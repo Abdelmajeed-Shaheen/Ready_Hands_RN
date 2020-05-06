@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   card: {
-    height: 75,
+    height: 120,
     width: 240,
     borderStyle: "solid",
     borderBottomWidth: 5,
@@ -29,8 +29,6 @@ const styles = StyleSheet.create({
   cardjob: {
     elevation: 10,
     borderStyle: "solid",
-    borderBottomWidth: 10,
-    borderRadius: 20,
     borderBottomColor: "rgb(192,192,192)   ",
     borderLeftColor: "rgb(192,192,192)   ",
   },
@@ -38,18 +36,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#669999",
     fontSize: 17,
     fontWeight: "bold",
-    fontFamily: "Apple SD Gothic Neo",
   },
   cardText: {
     fontSize: 17,
     fontWeight: "bold",
-    fontFamily: "Apple SD Gothic Neo",
     color: "black",
   },
   cardheader: {
     fontSize: 17,
     fontWeight: "bold",
-    fontFamily: "Apple SD Gothic Neo",
+    backgroundColor: "white",
   },
 
   activeTabStyle: {

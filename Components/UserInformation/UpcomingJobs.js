@@ -20,10 +20,9 @@ class UpcomingJobs extends Component {
     ));
     return (
       <Content>
-        {this.props.applied_jobs === true ? (
+        {!this.props.applied_jobs === true ? (
           <Body>
             <Text style={{ fontWeight: "bold" }}>
-              {" "}
               You Have Not Applied To Any Jobs Yet
             </Text>
           </Body>

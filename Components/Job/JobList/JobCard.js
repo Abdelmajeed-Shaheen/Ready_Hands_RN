@@ -1,7 +1,7 @@
 import React from "react";
 
 //Native Base
-import { Card, Left, Text, CardItem } from "native-base";
+import { Card, Left, Text, CardItem, Body, Right } from "native-base";
 
 //Touch Opacity
 import { TouchableOpacity } from "react-native-gesture-handler";
@@ -9,6 +9,8 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { JOBDETAIL } from "../../../Navigation/screenNames";
 //StyleSheet
 import styles from "../styles";
+
+import moment from "moment";
 
 const JobCard = ({ navigation, job }) => (
   <TouchableOpacity onPress={() => navigation.navigate(JOBDETAIL, { job })}>
@@ -31,9 +33,18 @@ const JobCard = ({ navigation, job }) => (
       <CardItem>
         <Left>
           <Text style={{ fontWeight: "bold", fontSize: 14, color: "black" }}>
-            Number of workers :{job.no_of_workers}
+            Date: {moment(job.date_from).format("LLLL")}{" "}
           </Text>
         </Left>
+      </CardItem>
+      <CardItem>
+        <Body>
+          <Right>
+            <Text style={{ fontWeight: "bold", color: "rgb(200,0,0)" }}>
+              More Details{" "}
+            </Text>
+          </Right>
+        </Body>
       </CardItem>
     </Card>
   </TouchableOpacity>

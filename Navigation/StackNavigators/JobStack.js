@@ -1,11 +1,16 @@
 import React from "react";
 
+//Stack Navigator
 import { createStackNavigator } from "@react-navigation/stack";
-import { JOBS, JOBDETAIL } from "../screenNames";
-import Jobs from "../../Components/Job/index";
-import JobDetail from "../../Components/Job/JobDetail/JobDetail";
 
-import screenOptions from "../screenOptions";
+//Screen Names
+import { JOBS, JOBDETAIL } from "../screenNames";
+
+//Jobs
+import Jobs from "../../Components/Job";
+
+//Job Detail
+import JobDetail from "../../Components/Job/JobDetail/JobDetail";
 
 const { Navigator, Screen } = createStackNavigator();
 

@@ -28,7 +28,7 @@ import { Image } from "react-native";
 import styles from "../../Job/styles";
 
 //Screen Names
-import { JOBS } from "../../../Navigation/screenNames";
+import { JOBS, PREVJOBS, USERINFO } from "../../../Navigation/screenNames";
 import { Alert } from "react-native-alert-dialogues";
 
 //Connect
@@ -90,23 +90,25 @@ class JobDetail extends Component {
             </Right>
           </CardItem>
           <CardItem>
-            <MapView
-              value={this.state.region}
-              style={{ width: 500, height: 200 }}
-              region={this.state.region}
-              loadingEnabled={true}
-              tintColor={"red"}
-            >
-              <Marker
-                coordinate={{
-                  latitude: job.latitude,
-                  longitude: job.longitude,
-                }}
-                key={job.title}
+            <Left>
+              <MapView
+                value={this.state.region}
+                style={{ width: 500, height: 200 }}
+                region={this.state.region}
+                loadingEnabled={true}
+                tintColor={"red"}
               >
-                <Icon name="map-marker" type="FontAwesome" />
-              </Marker>
-            </MapView>
+                <Marker
+                  coordinate={{
+                    latitude: job.latitude,
+                    longitude: job.longitude,
+                  }}
+                  key={job.title}
+                >
+                  <Icon name="map-marker" type="FontAwesome" />
+                </Marker>
+              </MapView>
+            </Left>
           </CardItem>
           <CardItem>
             <Left>
@@ -118,12 +120,12 @@ class JobDetail extends Component {
           <CardItem>
             <Left>
               <Text style={{ fontWeight: "bold", fontSize: 15 }}>
-                From : {moment(job.date_from).format("dddd MMMM  YYYY, h:mm a")}
+                From : {moment(job.date_from).format("LLLL")}
               </Text>
             </Left>
             <Right>
               <Text style={{ fontWeight: "bold", fontSize: 15 }}>
-                To : {moment(job.date_to).format("dddd MMMM  YYYY, h:mm a")}
+                To : {moment(job.date_to).format("LLLL")}
               </Text>
             </Right>
           </CardItem>
@@ -134,15 +136,7 @@ class JobDetail extends Component {
               </Text>
             </Left>
           </CardItem>
-          <CardItem>
-            <Left>
-              <Text style={{ fontWeight: "bold", fontSize: 15 }}>Rating</Text>
-              <Image
-                source={require("../../../assets/stars.png")}
-                style={{ height: 80 }}
-              />
-            </Left>
-          </CardItem>
+
           <CardItem>
             <Body>
               {appliedList.length === 0 ? (
@@ -159,7 +153,7 @@ class JobDetail extends Component {
                   </Text>
                 </Button>
               ) : (
-                <Text style={{ fontWeight: "bold", color: "green" }}>
+                <Text style={{ fontWeight: "bold", color: "rgb(0,130,0)" }}>
                   {" "}
                   Successfully Applied
                 </Text>
