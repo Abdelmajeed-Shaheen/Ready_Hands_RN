@@ -16,6 +16,7 @@ import { JOBDETAIL } from "../../../Navigation/screenNames";
 //Connect
 import { connect } from "react-redux";
 
+// rename file to index.js
 class JobMap extends Component {
   state = {
     region: {

@@ -2,8 +2,8 @@ import React from "react";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { AUTHENTICATION, USERINFO } from "../screenNames";
-import Authentication from "../../Components/Authentication/index";
-import UserInformation from "../../Components/UserInformation/index";
+import Authentication from "../../Components/Authentication/index"; // remove index
+import UserInformation from "../../Components/UserInformation/index"; // remove index
 import { connect } from "react-redux";
 
 import screenOptions from "../screenOptions";

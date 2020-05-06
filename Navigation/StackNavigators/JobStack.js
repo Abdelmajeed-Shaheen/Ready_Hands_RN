@@ -2,7 +2,7 @@ import React from "react";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { JOBS, JOBDETAIL } from "../screenNames";
-import Jobs from "../../Components/Job/index";
+import Jobs from "../../Components/Job/index"; //remove index
 import JobDetail from "../../Components/Job/JobDetail/JobDetail";
 
 import screenOptions from "../screenOptions";

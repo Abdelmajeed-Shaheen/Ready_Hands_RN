@@ -43,6 +43,9 @@ class UserInformation extends Component {
     loading: true,
   };
 
+  // you don't need the loading state.
+  // this component is only used only when there is a user.
+  // there's a condition that does this in UserStack's render.
   componentWillMount = () => {
     if (this.props.user) this.setState({ loading: false });
   };
@@ -76,6 +79,7 @@ class UserInformation extends Component {
               </TabHeading>
             }
           >
+            {/* this condition isn't necessary because there's already a condition in UserStack */}
             {this.props.user ? <Profile /> : null}
           </Tab>
 

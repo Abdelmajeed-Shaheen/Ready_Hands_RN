@@ -39,6 +39,9 @@ export const login = (userData) => async (dispatch) => {
     const response = await instance.post(`login`, userData);
     const token = response.data.access;
     dispatch(setCurrentUser(token));
+
+    // login doesn't redirect to jobs map/list because you're
+    // not calling a redirect() function here
   } catch (error) {
     console.error(error);
   }
