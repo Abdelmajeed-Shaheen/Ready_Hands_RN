@@ -143,7 +143,7 @@ class JobDetail extends Component {
                 <Button
                   full
                   style={{
-                    backgroundColor: "#669999",
+                    backgroundColor: "#00838f",
                     borderRadius: "10",
                   }}
                   onPress={() => applyToJob(job.id)}

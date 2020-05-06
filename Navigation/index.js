@@ -28,7 +28,7 @@ const RootTabNavigator = ({ user }) => (
       activeTintColor: "white",
       inactiveTintColor: "black",
       style: {
-        backgroundColor: "#669999",
+        backgroundColor: "#00838f",
       },
     }}
     screenOptions={({ route }) => ({

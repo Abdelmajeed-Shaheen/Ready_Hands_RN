@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   authButton: {
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
     marginTop: 5,
   },
   tabBar: {
     backgroundColor: "#669999",
   },
   title: {
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
     color: "black",
     paddingTop: 10,
     fontSize: 20,

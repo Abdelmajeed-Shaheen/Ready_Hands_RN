@@ -57,7 +57,7 @@ class UserInformation extends Component {
               <TabHeading
                 active
                 style={{
-                  backgroundColor: "#669999",
+                  backgroundColor: "#00838f",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                 }}
@@ -80,7 +80,7 @@ class UserInformation extends Component {
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#669999",
+                  backgroundColor: "#00838f",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                   underlineStyle: "white",
@@ -103,7 +103,7 @@ class UserInformation extends Component {
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#669999",
+                  backgroundColor: "#00838f",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                 }}

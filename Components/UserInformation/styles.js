@@ -7,10 +7,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   iconColor: {
-    color: "#669999",
+    color: "#00838f",
   },
   title: {
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
     color: "black",
     paddingTop: 10,
     fontSize: 20,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     borderLeftColor: "rgb(192,192,192)   ",
   },
   prevcardHeader: {
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
   },
 
   upcomingcard: {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     borderLeftColor: "rgb(192,192,192)   ",
   },
   upcomingcardHeader: {
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
   },
 
   indicatorStyle: {

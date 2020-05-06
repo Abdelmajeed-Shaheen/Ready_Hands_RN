@@ -41,7 +41,7 @@ class Jobs extends Component {
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#669999",
+                  backgroundColor: "#00838f",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                   underlineStyle: "white",
@@ -71,7 +71,7 @@ class Jobs extends Component {
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#669999",
+                  backgroundColor: "#00838f",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                 }}

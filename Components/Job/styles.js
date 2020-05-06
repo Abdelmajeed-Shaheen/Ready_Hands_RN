@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   title: {
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
     color: "black",
     paddingTop: 10,
     fontSize: 20,
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   detail: {
     marginTop: 10,
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
     color: "white",
     fontSize: 20,
     paddingTop: 0,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     borderLeftColor: "rgb(192,192,192)   ",
   },
   cardHeader: {
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
     fontSize: 17,
     fontWeight: "bold",
   },
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
   background: {
-    backgroundColor: "#669999",
+    backgroundColor: "#00838f",
   },
 });
 
