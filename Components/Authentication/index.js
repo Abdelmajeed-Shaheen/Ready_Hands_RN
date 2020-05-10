@@ -31,14 +31,19 @@ class Authentication extends Component {
     const { navigation } = this.props;
     return (
       <Container>
-        <Title style={styles.title}>Authentication</Title>
-        <Tabs tabBarUnderlineStyle={{ borderBottomWidth: 4 }}>
+        <Title style={styles.title}>Welcome</Title>
+        <Tabs
+          tabBarUnderlineStyle={{
+            borderBottomWidth: 4,
+            borderBottomColor: "#00838f",
+          }}
+        >
           <Tab
             active={this.state.activePage === 1}
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#00838f",
+                  backgroundColor: "white",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                   underlineStyle: "white",
@@ -48,12 +53,12 @@ class Authentication extends Component {
                   name="ios-paper"
                   type="Ionicons"
                   style={{
-                    color: this.state.activePage == 1 ? "white" : "black",
+                    color: "#00838f",
                   }}
                 />
                 <Text
                   style={{
-                    color: "white",
+                    color: "#00838f",
                     fontWeight: "bold",
                   }}
                 >
@@ -68,21 +73,21 @@ class Authentication extends Component {
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#00838f",
+                  backgroundColor: "white",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                 }}
               >
                 <Icon
                   style={{
-                    color: "black",
+                    color: "#00838f",
                   }}
                   name="login"
                   type="Entypo"
                 />
                 <Text
                   style={{
-                    color: "white",
+                    color: "#00838f",
                     fontWeight: "bold",
                   }}
                 >

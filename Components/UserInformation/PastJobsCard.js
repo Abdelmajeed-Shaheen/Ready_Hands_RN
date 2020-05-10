@@ -13,7 +13,9 @@ const PastJobsCard = ({ job }) => (
   <Card style={styles.prevcard}>
     <CardItem style={styles.prevcardHeader}>
       <Left>
-        <Text style={{ fontWeight: "bold", fontSize: 18 }}>{job.title}</Text>
+        <Text style={{ fontWeight: "bold", fontSize: 18, color: "white" }}>
+          {job.title}
+        </Text>
       </Left>
     </CardItem>
     <CardItem>

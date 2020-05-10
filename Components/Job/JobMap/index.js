@@ -28,7 +28,7 @@ class JobMap extends Component {
 
   render() {
     const { navigation } = this.props;
-    if (this.props.loading) return <Spinner color="rgb(70,144,69)" />;
+    if (this.props.loading) return <Spinner color="#00838f" />;
 
     return (
       <MapView

@@ -54,6 +54,7 @@ const Profile = ({ user, navigation, loading }) => {
           maxStars={5}
           rating={parseInt(user.rating)}
           selectedStar={(rating) => this.onStarRatingPress(rating)}
+          fullStarColor="gold"
         />
       </CardItem>
       <CardItem>

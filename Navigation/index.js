@@ -25,10 +25,10 @@ const RootTabNavigator = ({ user }) => (
   <Navigator
     tabBarOptions={{
       showLabel: false,
-      activeTintColor: "white",
-      inactiveTintColor: "black",
+      activeTintColor: "#00838f",
+      inactiveTintColor: "#DCDCDC",
       style: {
-        backgroundColor: "#00838f",
+        backgroundColor: "white",
       },
     }}
     screenOptions={({ route }) => ({

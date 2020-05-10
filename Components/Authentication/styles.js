@@ -33,11 +33,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#669999",
   },
   title: {
-    backgroundColor: "#00838f",
-    color: "black",
+    backgroundColor: "white",
+    color: "#00838f",
     paddingTop: 10,
     fontSize: 20,
-    marginTop: 1,
+    marginTop: 10,
   },
   detail: {},
 });

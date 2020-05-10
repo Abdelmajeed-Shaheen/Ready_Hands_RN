@@ -17,7 +17,7 @@ const MarkerCard = ({ job, navigation }) => (
 
       <Text style={styles.cardText}>Price/Worker: {job.price} JD</Text>
       <Text style={styles.cardText}>
-        Date: {moment(job.date_from).format("LLLL")}{" "}
+        Date: {moment(job.date_from).format("LLLL")}
       </Text>
       <Text style={{ fontWeight: "bold", color: "rgb(200,0,0)" }}>
         More Details...

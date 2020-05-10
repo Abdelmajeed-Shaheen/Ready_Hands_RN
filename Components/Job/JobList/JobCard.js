@@ -17,7 +17,9 @@ const JobCard = ({ navigation, job }) => (
     <Card style={styles.cardjob}>
       <CardItem style={styles.cardHeader}>
         <Left>
-          <Text style={{ fontWeight: "bold", fontSize: 18 }}>{job.title}</Text>
+          <Text style={{ fontWeight: "bold", fontSize: 18, color: "white" }}>
+            {job.title}
+          </Text>
         </Left>
       </CardItem>
       <CardItem>

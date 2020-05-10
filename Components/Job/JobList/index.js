@@ -31,7 +31,7 @@ class JobList extends Component {
     });
   };
   render() {
-    if (this.props.loading) return <Spinner color="rgb(70,144,69)" />;
+    if (this.props.loading) return <Spinner color="#00838f" />;
 
     const { navigation } = this.props;
     const jobsList = this.filterJobs().map((job) => (
@@ -43,7 +43,7 @@ class JobList extends Component {
           <Item>
             <Icon name="ios-search" />
             <Input
-              placeholder="Search in jobs"
+              placeholder="Search in jobs..."
               onChangeText={this.setQuery}
               value={this.state.query}
             />
@@ -53,7 +53,13 @@ class JobList extends Component {
         <Text style={{ fontWeight: "bold" }}>
           {/* {this.props.jobs.length} Jobs Found */}
         </Text>
-        <List>{jobsList}</List>
+        {jobsList.length ? (
+          <List>{jobsList}</List>
+        ) : (
+          <Text style={{ fontWeight: "bold", fontSize: 20, marginTop: 10 }}>
+            No Jobs Available With That Name!!
+          </Text>
+        )}
       </Content>
     );
   }

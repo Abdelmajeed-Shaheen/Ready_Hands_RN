@@ -20,12 +20,14 @@ class PreviousJobs extends Component {
     ));
     return (
       <Content>
-        {this.props.applied_jobs === false ? (
-          <Body>
-            <Text style={{ fontWeight: "bold" }}>No Pending Jobs</Text>
-          </Body>
-        ) : (
+        {pendingJobs.length !== 0 ? (
           <List>{jobsList}</List>
+        ) : (
+          <Body>
+            <Text style={{ fontWeight: "bold", fontSize: 20, marginTop: 10 }}>
+              No Pending Jobs!!
+            </Text>
+          </Body>
         )}
       </Content>
     );

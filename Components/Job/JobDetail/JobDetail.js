@@ -13,6 +13,7 @@ import {
   Button,
   Title,
   Header,
+  Footer,
 } from "native-base";
 
 //Map Marker
@@ -66,34 +67,44 @@ class JobDetail extends Component {
               <Icon style={styles.detail} name="arrow-back" />
             </Button>
           </Left>
+
           <Left>
-            <Title style={styles.title}>Job Details</Title>
+            <Title>
+              <Text style={styles.dtitle}>Job Details</Text>
+            </Title>
           </Left>
         </Header>
-        <Card>
+        <Card style={{ borderBottomWidth: 8 }}>
           <CardItem>
-            <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+            <Text
+              style={{ fontWeight: "bold", fontSize: 20, color: "#00838f" }}
+            >
               {job.title}
             </Text>
           </CardItem>
-          <CardItem>
-            <Left>
-              <Text style={{ fontWeight: "bold", fontSize: 15 }}>
-                Client Name: {job.client.user.first_name}{" "}
-                {job.client.user.last_name}
-              </Text>
-            </Left>
-            <Right>
-              <Text style={{ fontWeight: "bold", fontSize: 15 }}>
-                Service: {job.service.title}
-              </Text>
-            </Right>
-          </CardItem>
-          <CardItem>
-            <Left>
+          <Card>
+            <CardItem>
+              <Left>
+                <Text style={{ fontWeight: "bold", fontSize: 18 }}>
+                  Client: {job.client.user.first_name}{" "}
+                  {job.client.user.last_name}
+                </Text>
+              </Left>
+              <Right>
+                <Text style={{ fontWeight: "bold", fontSize: 18 }}>
+                  Service: {job.service.title}
+                </Text>
+              </Right>
+            </CardItem>
+            <CardItem>
               <MapView
                 value={this.state.region}
-                style={{ width: 500, height: 200 }}
+                style={{
+                  width: 350,
+                  height: 200,
+                  marginLeft: -8,
+                  borderBottomWidth: 8,
+                }}
                 region={this.state.region}
                 loadingEnabled={true}
                 tintColor={"red"}
@@ -108,30 +119,33 @@ class JobDetail extends Component {
                   <Icon name="map-marker" type="FontAwesome" />
                 </Marker>
               </MapView>
-            </Left>
-          </CardItem>
+            </CardItem>
+          </Card>
+
           <CardItem>
             <Left>
-              <Text style={{ fontWeight: "bold", fontSize: 15 }}>
+              <Text
+                style={{ fontWeight: "bold", fontSize: 20, color: "#00838f" }}
+              >
                 Price: {job.price} JD
               </Text>
             </Left>
           </CardItem>
           <CardItem>
             <Left>
-              <Text style={{ fontWeight: "bold", fontSize: 15 }}>
+              <Text style={{ fontWeight: "bold", fontSize: 16 }}>
                 From : {moment(job.date_from).format("LLLL")}
               </Text>
             </Left>
             <Right>
-              <Text style={{ fontWeight: "bold", fontSize: 15 }}>
+              <Text style={{ fontWeight: "bold", fontSize: 16 }}>
                 To : {moment(job.date_to).format("LLLL")}
               </Text>
             </Right>
           </CardItem>
           <CardItem>
             <Left>
-              <Text style={{ fontWeight: "bold", fontSize: 15 }}>
+              <Text style={{ fontWeight: "bold", fontSize: 16 }}>
                 Workers Needed : {job.no_of_workers}
               </Text>
             </Left>
@@ -151,12 +165,15 @@ class JobDetail extends Component {
                   <Text full style={{ fontWeight: "bold", color: "white" }}>
                     Apply
                   </Text>
+
+                  <Icon name="checkcircleo" type="AntDesign" />
                 </Button>
               ) : (
-                <Text style={{ fontWeight: "bold", color: "rgb(0,130,0)" }}>
-                  {" "}
-                  Successfully Applied
-                </Text>
+                <Left>
+                  <Text style={{ fontWeight: "bold", color: "rgb(0,130,0)" }}>
+                    Successfully Applied
+                  </Text>
+                </Left>
               )}
             </Body>
           </CardItem>

@@ -36,12 +36,17 @@ class Jobs extends Component {
     return (
       <Container>
         <Title style={styles.title}>Jobs</Title>
-        <Tabs tabBarUnderlineStyle={{ borderBottomWidth: 5 }}>
+        <Tabs
+          tabBarUnderlineStyle={{
+            borderBottomWidth: 4,
+            borderBottomColor: "#00838f",
+          }}
+        >
           <Tab
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#00838f",
+                  backgroundColor: "white",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                   underlineStyle: "white",
@@ -51,12 +56,12 @@ class Jobs extends Component {
                   name="map-marker"
                   type="FontAwesome"
                   style={{
-                    color: this.state.activePage == 1 ? "black" : "black",
+                    color: "#00838f",
                   }}
                 />
                 <Text
                   style={{
-                    color: this.state.activePage == 1 ? "white" : "black",
+                    color: "#00838f",
                     fontWeight: "bold",
                   }}
                 >
@@ -71,21 +76,21 @@ class Jobs extends Component {
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#00838f",
+                  backgroundColor: "white",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                 }}
               >
                 <Icon
                   style={{
-                    color: "black",
+                    color: "#00838f",
                   }}
                   name="list"
                   type="MaterialIcons"
                 />
                 <Text
                   style={{
-                    color: this.state.activePage == 1 ? "white" : "black",
+                    color: "#00838f",
                     fontWeight: "bold",
                   }}
                 >

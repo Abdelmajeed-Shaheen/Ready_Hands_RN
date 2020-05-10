@@ -51,20 +51,25 @@ class UserInformation extends Component {
     return (
       <Container>
         <Title style={styles.title}>{USERINFO}</Title>
-        <Tabs tabBarUnderlineStyle={{ borderBottomWidth: 5 }}>
+        <Tabs
+          tabBarUnderlineStyle={{
+            borderBottomWidth: 5,
+            borderBottomColor: "#00838f",
+          }}
+        >
           <Tab
             heading={
               <TabHeading
                 active
                 style={{
-                  backgroundColor: "#00838f",
-                  activeTextStyle: "black",
+                  backgroundColor: "white",
+                  activeTextStyle: "#00838f",
                   activeTabStyle: "red",
                 }}
               >
                 <Text
                   style={{
-                    color: "white",
+                    color: "#00838f",
                     fontWeight: "bold",
                   }}
                 >
@@ -80,7 +85,7 @@ class UserInformation extends Component {
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#00838f",
+                  backgroundColor: "white",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                   underlineStyle: "white",
@@ -88,7 +93,7 @@ class UserInformation extends Component {
               >
                 <Text
                   style={{
-                    color: "white",
+                    color: "#00838f",
                     fontWeight: "bold",
                   }}
                 >
@@ -103,14 +108,14 @@ class UserInformation extends Component {
             heading={
               <TabHeading
                 style={{
-                  backgroundColor: "#00838f",
+                  backgroundColor: "white",
                   activeTextStyle: "black",
                   activeTabStyle: "red",
                 }}
               >
                 <Text
                   style={{
-                    color: "white",
+                    color: "#00838f",
                     fontWeight: "bold",
                   }}
                 >
